@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鉴黄师官方下载 - 内容审核工具与版本资讯</title>
+<meta name="description" content="鉴黄师官方下载页面，汇聚鉴黄内容审核工具各版本下载、功能说明、使用教程与更新动态，适合内容审核从业者与平台运营人员参考选择。">
+<meta name="keywords" content="内容审核工具,鉴黄识别软件,图片审核系统,审核员工作台,审核规则">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2b3d'/%3E%3Ccircle cx='32' cy='30' r='13' fill='none' stroke='%23e8a33d' stroke-width='4'/%3E%3Ccircle cx='32' cy='30' r='4' fill='%23e8a33d'/%3E%3Cpath d='M32 43v11M22 54h20' stroke='%23e8a33d' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0f2b3d;
+  --ink-soft:#2c4a5e;
+  --paper:#f6f4ef;
+  --panel:#ffffff;
+  --line:#dcd6ca;
+  --line-soft:#eae5db;
+  --accent:#e8a33d;
+  --accent-deep:#c07a16;
+  --teal:#1d6b6b;
+  --danger:#b8442f;
+  --muted:#6b7a83;
+  --radius:10px;
+  --radius-sm:6px;
+  --shadow:0 2px 10px rgba(15,43,61,.07);
+  --shadow-lg:0 8px 28px rgba(15,43,61,.12);
+  --sticky-h:104px;
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-h);}
+body{
+  margin:0;font-family:var(--font);background:var(--paper);color:var(--ink);
+  font-size:15px;line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--teal);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;}
+p{margin:0 0 .8em;}
+ul,ol{margin:0 0 .8em;padding-left:1.3em;}
+li{margin-bottom:.35em;}
+img{display:block;max-width:100%;}
+
+/* ============ 吸顶公告条 + 页头 ============ */
+.sticky-wrap{position:sticky;top:0;z-index:60;box-shadow:0 1px 0 var(--line);}
+.notice-bar{
+  background:var(--ink);color:#f3e9d6;font-size:13.5px;
+  display:flex;align-items:center;gap:10px;padding:7px 20px;
+  justify-content:center;text-align:center;flex-wrap:wrap;
+}
+.notice-bar .tag{
+  background:var(--accent);color:#3a2503;font-weight:700;
+  font-size:11.5px;padding:1px 7px;border-radius:3px;letter-spacing:.5px;
+  flex:none;
+}
+.notice-bar a{color:#f6d99c;}
+.site-header{
+  background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1360px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;gap:22px;height:64px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none;}
+.brand svg{width:34px;height:34px;flex:none;}
+.brand-name{font-size:19px;font-weight:800;color:var(--ink);letter-spacing:.5px;white-space:nowrap;}
+.main-nav{display:flex;gap:4px;flex-wrap:wrap;flex:1;}
+.main-nav a{
+  font-size:14px;color:var(--ink-soft);padding:6px 11px;border-radius:var(--radius-sm);
+  white-space:nowrap;
+}
+.main-nav a:hover{background:#f0ece2;text-decoration:none;color:var(--ink);}
+.header-quick{display:flex;gap:8px;flex:none;}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  border:1px solid transparent;border-radius:var(--radius-sm);
+  font-size:13.5px;font-weight:600;padding:8px 15px;cursor:pointer;
+  font-family:inherit;white-space:nowrap;
+}
+.btn-primary{background:var(--ink);color:#fff;}
+.btn-primary:hover{background:#1b4258;text-decoration:none;}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink-soft);}
+.btn-ghost:hover{background:#f0ece2;text-decoration:none;}
+.btn-accent{background:var(--accent);color:#3a2503;}
+.btn-accent:hover{background:#f0b255;text-decoration:none;}
+:focus-visible{outline:3px solid var(--accent-deep);outline-offset:2px;border-radius:4px;}
+
+/* ============ 布局 ============ */
+.wrap{max-width:1360px;margin:0 auto;padding:0 24px;}
+.layout{
+  display:grid;grid-template-columns:210px minmax(0,1fr) 290px;
+  gap:26px;align-items:start;padding:26px 0 50px;
+}
+.layout > *{min-width:0;}
+
+/* 左侧频道索引 */
+.chan-index{
+  position:sticky;top:var(--sticky-h);background:var(--panel);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 0;box-shadow:var(--shadow);
+}
+.chan-index h2{
+  font-size:15px;padding:0 16px 10px;border-bottom:1px solid var(--line-soft);
+  margin-bottom:8px;color:var(--ink);
+}
+.chan-index ul{list-style:none;margin:0;padding:0;}
+.chan-index li{margin:0;}
+.chan-index a{
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
+  padding:8px 16px;font-size:14px;color:var(--ink-soft);
+  border-left:3px solid transparent;
+}
+.chan-index a:hover{background:#f7f4ec;text-decoration:none;border-left-color:var(--accent);color:var(--ink);}
+.chan-index .num{font-size:11.5px;color:var(--muted);background:#f0ece2;padding:0 6px;border-radius:8px;}
+.chan-index .dl-box{margin:14px 14px 0;padding:12px;background:#f7f4ec;border-radius:var(--radius-sm);font-size:12.5px;color:var(--ink-soft);}
+.chan-index .dl-box strong{display:block;color:var(--ink);font-size:13px;margin-bottom:4px;}
+
+/* 右侧辅助栏 */
+.side{padding-top:0;}
+.side-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden;
+}
+.side-card h2{
+  font-size:14.5px;padding:12px 16px;border-bottom:1px solid var(--line-soft);
+  display:flex;justify-content:space-between;align-items:center;background:#fbf9f4;
+}
+.side-card h2 span{font-size:11.5px;color:var(--muted);font-weight:400;}
+.side-card .body{padding:10px 16px 14px;}
+.hot-list{list-style:none;margin:0;padding:0;counter-reset:hot;}
+.hot-list li{
+  counter-increment:hot;display:flex;gap:10px;padding:8px 0;
+  border-bottom:1px dashed var(--line-soft);font-size:13.5px;
+}
+.hot-list li:last-child{border-bottom:none;}
+.hot-list li::before{
+  content:counter(hot);flex:none;width:19px;height:19px;border-radius:5px;
+  background:#e6e0d2;color:var(--ink-soft);font-size:11.5px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.hot-list li:nth-child(-n+3)::before{background:var(--accent);color:#3a2503;}
+.hot-list a{color:var(--ink-soft);}
+.hot-list a:hover{color:var(--teal);}
+.hot-list .hinfo{display:block;font-size:11.5px;color:var(--muted);}
+.update-flow{list-style:none;margin:0;padding:0;font-size:13px;}
+.update-flow li{padding:8px 0 8px 14px;border-bottom:1px dashed var(--line-soft);position:relative;color:var(--ink-soft);}
+.update-flow li:last-child{border-bottom:none;}
+.update-flow li::before{
+  content:"";position:absolute;left:0;top:15px;width:5px;height:5px;border-radius:50%;background:var(--teal);
+}
+.update-flow time{display:block;font-size:11.5px;color:var(--muted);}
+
+/* ============ 首屏 ============ */
+.hero{
+  background:linear-gradient(135deg,#0f2b3d 0%,#164a5c 55%,#1d6b6b 100%);
+  color:#eef4f2;border-radius:14px;overflow:hidden;position:relative;
+  margin-bottom:28px;box-shadow:var(--shadow-lg);
+}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:20px;padding:38px 34px 34px;align-items:center;}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:7px;font-size:12.5px;letter-spacing:1px;
+  background:rgba(232,163,61,.16);border:1px solid rgba(232,163,61,.45);
+  color:#f6d99c;padding:3px 11px;border-radius:20px;margin-bottom:14px;
+}
+.hero h1{
+  font-size:clamp(26px,3.4vw,38px);color:#fff;letter-spacing:1px;margin-bottom:14px;
+  text-shadow:0 2px 12px rgba(0,0,0,.25);
+}
+.hero-lead{font-size:14.5px;line-height:1.85;color:#cfe0dd;max-width:560px;margin-bottom:20px;}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;}
+.hero-actions .btn-accent{padding:10px 20px;font-size:14px;}
+.hero-actions .btn-ghost{color:#e6f0ee;border-color:rgba(255,255,255,.32);}
+.hero-actions .btn-ghost:hover{background:rgba(255,255,255,.1);}
+.hero-stats{display:flex;gap:24px;flex-wrap:wrap;font-size:12.5px;color:#a9c6c2;}
+.hero-stats b{display:block;font-size:19px;color:#f3d79e;font-weight:800;line-height:1.2;}
+.hero-art{position:relative;}
+.hero-art svg{width:100%;height:auto;display:block;}
+
+/* ============ 通用板块 ============ */
+.section{margin-bottom:34px;}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:6px;flex-wrap:wrap;}
+.sec-head h2{font-size:20px;letter-spacing:.5px;position:relative;padding-left:13px;}
+.sec-head h2::before{
+  content:"";position:absolute;left:0;top:5px;bottom:5px;width:4px;border-radius:2px;
+  background:var(--accent);
+}
+.sec-head .more{font-size:12.5px;color:var(--muted);}
+.sec-intro{font-size:13.5px;color:var(--muted);margin:0 0 16px;line-height:1.7;}
+.card-panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow);
+}
+.prose p{font-size:14.5px;color:var(--ink-soft);line-height:1.9;}
+.prose strong{color:var(--ink);}
+
+/* 概览 */
+.overview-panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow);
+}
+.overview-panel p{font-size:14.5px;color:var(--ink-soft);line-height:1.9;}
+.overview-facts{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:16px;
+}
+.ov-fact{background:#f7f4ec;border-radius:var(--radius-sm);padding:11px 13px;border-left:3px solid var(--teal);}
+.ov-fact b{display:block;font-size:13px;color:var(--ink);}
+.ov-fact span{font-size:12.5px;color:var(--muted);}
+
+/* 精选卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;}
+.item-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow);
+  transition:transform .18s ease,box-shadow .18s ease;
+}
+.item-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.item-card .thumb{aspect-ratio:4/3;overflow:hidden;background:#e8e2d4;}
+.item-card .thumb img{width:100%;height:100%;object-fit:cover;}
+.item-card .cbody{padding:13px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1;}
+.item-card h3{font-size:15px;color:var(--ink);}
+.type-tag{
+  display:inline-block;font-size:11.5px;font-weight:600;color:#8a4b06;
+  background:#fbeed6;border:1px solid #f0d6a8;padding:0 7px;border-radius:3px;
+}
+.item-card .tags{display:flex;gap:5px;flex-wrap:wrap;}
+.item-card .tags span{
+  font-size:11px;color:var(--teal);background:#e6f0ee;padding:1px 6px;border-radius:3px;
+}
+.item-card .desc{font-size:13px;color:var(--ink-soft);line-height:1.65;margin:0;flex:1;}
+.item-card .meta{
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
+  font-size:11.5px;color:var(--muted);border-top:1px dashed var(--line-soft);padding-top:8px;
+}
+.item-card .meta .hot{color:var(--danger);font-weight:700;}
+
+/* 最新动态 */
+.news-list{list-style:none;margin:0;padding:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;}
+.news-list li{
+  display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;
+  padding:12px 18px;border-bottom:1px solid var(--line-soft);align-items:baseline;
+}
+.news-list li:last-child{border-bottom:none;}
+.news-list time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.news-list b{font-size:14px;color:var(--ink);}
+.news-list p{font-size:13px;color:var(--ink-soft);margin:2px 0 0;}
+.news-list .live{color:var(--danger);font-weight:700;font-size:11.5px;}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:11px;}
+.cat-tile{
+  display:block;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:14px 14px 13px;box-shadow:var(--shadow);
+  transition:border-color .15s,background .15s;
+}
+.cat-tile:hover{border-color:var(--teal);background:#fbfaf6;text-decoration:none;}
+.cat-tile b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:3px;}
+.cat-tile span{font-size:12px;color:var(--muted);}
+
+/* 深度解析 */
+.deep{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:26px 30px;box-shadow:var(--shadow);}
+.deep h2{font-size:21px;margin-bottom:6px;}
+.deep .lead{font-size:13.5px;color:var(--muted);margin-bottom:20px;border-bottom:1px solid var(--line-soft);padding-bottom:14px;}
+.deep h3{font-size:16.5px;color:var(--ink);margin:22px 0 8px;padding-left:11px;border-left:3px solid var(--teal);}
+.deep p{font-size:14.5px;color:var(--ink-soft);line-height:1.9;}
+.deep ul,.deep ol{font-size:14.5px;color:var(--ink-soft);line-height:1.85;}
+.deep li b{color:var(--ink);}
+.compare-table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 6px;}
+.compare-table th,.compare-table td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;}
+.compare-table th{background:#f4f0e6;font-size:13px;color:var(--ink);font-weight:700;}
+.compare-table td{color:var(--ink-soft);}
+
+/* 体验指南：编号步骤 */
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;}
+.steps li{
+  counter-increment:step;position:relative;padding:0 0 18px 52px;
+  border-left:2px solid var(--line);margin-left:18px;
+}
+.steps li:last-child{border-left-color:transparent;padding-bottom:0;}
+.steps li::before{
+  content:counter(step);position:absolute;left:-19px;top:-2px;width:36px;height:36px;
+  border-radius:50%;background:var(--ink);color:#f3d79e;font-weight:800;font-size:15px;
+  display:flex;align-items:center;justify-content:center;border:3px solid var(--paper);
+}
+.steps h3{font-size:15px;margin-bottom:4px;color:var(--ink);}
+.steps p{font-size:13.5px;color:var(--ink-soft);margin:0;line-height:1.75;}
+
+/* FAQ */
+.faq{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.faq details{border-bottom:1px solid var(--line-soft);}
+.faq details:last-child{border-bottom:none;}
+.faq summary{
+  cursor:pointer;padding:14px 42px 14px 18px;font-size:14.5px;font-weight:600;color:var(--ink);
+  position:relative;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{
+  content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:19px;color:var(--teal);font-weight:400;transition:transform .2s;
+}
+.faq details[open] summary::after{content:"−";}
+.faq details[open] summary{background:#fbf9f4;}
+.faq .ans{padding:0 18px 16px;font-size:13.5px;color:var(--ink-soft);line-height:1.85;}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:13px;}
+.cmt{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:13px 15px;box-shadow:var(--shadow);font-size:13px;color:var(--ink-soft);line-height:1.7;
+}
+.cmt .who{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:none;
+  background:var(--teal);color:#fff;font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.cmt .who b{font-size:13px;color:var(--ink);font-weight:600;}
+.cmt .who time{margin-left:auto;font-size:11px;color:var(--muted);}
+.cmt .on{color:var(--teal);font-weight:600;}
+
+/* 资讯 */
+.info-list{display:grid;gap:14px;}
+.info-item{
+  display:grid;grid-template-columns:172px minmax(0,1fr);gap:16px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);
+}
+.info-item .pic{aspect-ratio:6/4;overflow:hidden;background:#e8e2d4;}
+.info-item .pic img{width:100%;height:100%;object-fit:cover;}
+.info-item .ibody{padding:13px 16px 14px 0;}
+.info-item h3{font-size:15px;margin-bottom:4px;}
+.info-item h3 a{color:var(--ink);}
+.info-item h3 a:hover{color:var(--teal);text-decoration:none;}
+.info-item .idate{font-size:11.5px;color:var(--muted);margin-bottom:5px;}
+.info-item p{font-size:13px;color:var(--ink-soft);margin:0;line-height:1.7;}
+
+/* 相关推荐 标签索引 */
+.tag-index{display:flex;flex-wrap:wrap;gap:9px;}
+.tag-index a{
+  display:inline-block;font-size:13px;color:var(--ink-soft);background:var(--panel);
+  border:1px solid var(--line);border-radius:20px;padding:5px 14px;box-shadow:var(--shadow);
+}
+.tag-index a:hover{background:var(--ink);color:#fff;border-color:var(--ink);text-decoration:none;}
+.tag-index a .c{font-size:11px;color:var(--muted);margin-left:4px;}
+.tag-index a:hover .c{color:#bfd3cf;}
+
+/* 榜单 */
+.rank-panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+.rank-row{
+  display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:center;
+  padding:11px 18px;border-bottom:1px solid var(--line-soft);
+}
+.rank-row:last-child{border-bottom:none;}
+.rank-no{
+  font-size:17px;font-weight:800;color:#b9b1a0;text-align:center;font-variant-numeric:tabular-nums;
+}
+.rank-row:nth-child(-n+3) .rank-no{color:var(--accent-deep);}
+.rank-row .rtitle{font-size:14px;color:var(--ink);font-weight:600;}
+.rank-row .rsub{font-size:12px;color:var(--muted);}
+.rank-row .rscore{font-size:12.5px;color:var(--teal);font-weight:700;white-space:nowrap;}
+.rank-bar{grid-column:1/-1;height:4px;border-radius:2px;background:#eee7d8;overflow:hidden;margin-top:-4px;}
+.rank-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--accent));}
+
+/* 搜索框 */
+.search-box{display:flex;gap:8px;margin-bottom:14px;}
+.search-box input{
+  flex:1;min-width:0;font-family:inherit;font-size:14px;padding:9px 13px;
+  border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--panel);color:var(--ink);
+}
+.search-box input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(29,107,107,.13);}
+.no-result{
+  display:none;font-size:13.5px;color:var(--danger);background:#fdf0ec;
+  border:1px solid #f2cfc6;border-radius:var(--radius-sm);padding:10px 14px;margin-bottom:14px;
+}
+.no-result.show{display:block;}
+
+/* 页尾 */
+.site-footer{background:var(--ink);color:#b9cdc8;margin-top:10px;padding:38px 0 22px;font-size:13px;}
+.footer-grid{
+  max-width:1360px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:26px;
+}
+.site-footer h4{font-size:14px;color:#f3e9d6;margin-bottom:10px;}
+.site-footer .fbrand{display:flex;align-items:center;gap:9px;margin-bottom:10px;}
+.site-footer .fbrand svg{width:30px;height:30px;}
+.site-footer .fbrand b{font-size:17px;color:#fff;letter-spacing:.5px;}
+.site-footer p{font-size:12.5px;line-height:1.8;color:#9db4af;margin:0 0 8px;}
+.site-footer ul{list-style:none;margin:0;padding:0;}
+.site-footer li{margin-bottom:6px;}
+.site-footer a{color:#c8dad6;font-size:12.5px;}
+.site-footer a:hover{color:#f3d79e;}
+.footer-bottom{
+  max-width:1360px;margin:26px auto 0;padding:16px 24px 0;border-top:1px solid rgba(255,255,255,.13);
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#8ca5a0;
+}
+
+/* 响应式 */
+@media (max-width:1080px){
+  .layout{grid-template-columns:200px minmax(0,1fr);}
+  .side{grid-column:1/-1;}
+  .side .side-card{display:inline-block;vertical-align:top;width:calc(50% - 11px);margin-right:18px;}
+  .side .side-card:nth-child(2n){margin-right:0;}
+}
+@media (max-width:860px){
+  .header-inner{flex-wrap:wrap;height:auto;padding:9px 18px;gap:10px;}
+  .main-nav{order:3;width:100%;flex-basis:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px;}
+  .header-quick{margin-left:auto;}
+  .layout{grid-template-columns:minmax(0,1fr);gap:20px;padding-top:18px;}
+  .chan-index{position:static;order:-1;}
+  .chan-index ul{display:flex;flex-wrap:wrap;gap:2px;padding:0 8px;}
+  .chan-index a{padding:6px 11px;border-left:none;border-radius:var(--radius-sm);font-size:13px;}
+  .chan-index a:hover{background:#f0ece2;border-left:none;}
+  .chan-index .num{display:none;}
+  .chan-index .dl-box{display:none;}
+  .hero-grid{grid-template-columns:minmax(0,1fr);padding:28px 22px;}
+  .hero-art{max-width:320px;margin:0 auto;}
+  .side .side-card{width:100%;margin-right:0;display:block;}
+  .info-item{grid-template-columns:130px minmax(0,1fr);}
+  .info-item .ibody{padding:12px 14px 12px 0;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:740px){
+  :root{--sticky-h:132px;}
+  body{font-size:14.5px;}
+  .wrap{padding:0 16px;}
+  .notice-bar{font-size:12.5px;padding:6px 14px;}
+  .hero h1{font-size:26px;}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px;}
+  .item-card h3{font-size:14px;}
+  .news-list li{grid-template-columns:minmax(0,1fr);gap:2px;padding:11px 14px;}
+  .news-list time{order:-1;font-size:11.5px;}
+  .info-item{grid-template-columns:minmax(0,1fr);}
+  .info-item .pic{aspect-ratio:16/8;}
+  .info-item .ibody{padding:12px 15px 15px;}
+  .deep{padding:20px 17px;}
+  .overview-panel,.card-panel{padding:17px 16px;}
+  .cat-grid{grid-template-columns:repeat(2,1fr);}
+  .comments{grid-template-columns:minmax(0,1fr);}
+  .footer-grid{grid-template-columns:1fr;gap:18px;}
+  .steps li{padding-left:44px;margin-left:15px;}
+  .steps li::before{width:31px;height:31px;left:-16.5px;font-size:13px;}
+  .rank-row{grid-template-columns:34px minmax(0,1fr);padding:10px 14px;}
+  .rank-row .rscore{grid-column:2;justify-self:start;margin-top:-2px;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 + 页头 -->
+<div class="sticky-wrap">
+  <div class="notice-bar">
+    <span class="tag">更新</span>
+    <span>11 月 8 日新增「鉴黄师 4.2.1 审核端」版本说明与 6 条规则解读 · <a href="#updates">查看更新</a></span>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#0f2b3d"/>
+          <circle cx="32" cy="30" r="13" fill="none" stroke="#e8a33d" stroke-width="4"/>
+          <circle cx="32" cy="30" r="4" fill="#e8a33d"/>
+          <path d="M32 43v11M22 54h20" stroke="#e8a33d" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">鉴黄师官方下载</span>
+      </div>
+      <nav class="main-nav" aria-label="主题导航">
+        <a href="#overview">工具概览</a>
+        <a href="#picks">版本精选</a>
+        <a href="#updates">更新动态</a>
+        <a href="#cats">功能分类</a>
+        <a href="#deep">规则解析</a>
+        <a href="#guide">上手路径</a>
+        <a href="#faq">常见问答</a>
+        <a href="#rank">版本榜</a>
+      </nav>
+      <div class="header-quick">
+        <a class="btn btn-ghost" href="#guide">安装说明</a>
+        <a class="btn btn-primary" href="#picks">下载入口</a>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main class="wrap">
+  <div class="layout">
+
+    <!-- 左：频道索引 -->
+    <aside class="chan-index" aria-label="频道索引">
+      <h2>频道索引</h2>
+      <ul>
+        <li><a href="#overview">工具概览 <span class="num">01</span></a></li>
+        <li><a href="#picks">版本精选 <span class="num">02</span></a></li>
+        <li><a href="#updates">更新动态 <span class="num">03</span></a></li>
+        <li><a href="#cats">功能分类 <span class="num">04</span></a></li>
+        <li><a href="#deep">审核规则解析 <span class="num">05</span></a></li>
+        <li><a href="#guide">上手路径 <span class="num">06</span></a></li>
+        <li><a href="#faq">常见问答 <span class="num">07</span></a></li>
+        <li><a href="#comments">用户评论 <span class="num">08</span></a></li>
+        <li><a href="#news">行业资讯 <span class="num">09</span></a></li>
+        <li><a href="#related">延伸方向 <span class="num">10</span></a></li>
+        <li><a href="#rank">版本榜 <span class="num">11</span></a></li>
+      </ul>
+      <div class="dl-box">
+        <strong>下载前先核对</strong>
+        确认版本号、运行平台与授权方式，再比对文件说明。
+      </div>
+    </aside>
+
+    <!-- 中：主内容 -->
+    <div>
+
+      <!-- 首屏 -->
+      <section class="hero" aria-label="主题首屏">
+        <div class="hero-grid">
+          <div>
+            <span class="hero-kicker">内容审核 · 版本与规则</span>
+            <h1>鉴黄师官方下载</h1>
+            <p class="hero-lead">聚合鉴黄内容审核工具的版本下载说明、功能模块对比、审核规则解析与上手路径，覆盖图片识别、视频抽帧、人工复核队列与合规留痕等具体方向。</p>
+            <div class="hero-actions">
+              <a class="btn btn-accent" href="#picks">查看版本精选</a>
+              <a class="btn btn-ghost" href="#guide">安装与配置路径</a>
+            </div>
+            <div class="hero-stats">
+              <div><b>4.2.1</b>当前主推版本</div>
+              <div><b>6</b>核心功能模块</div>
+              <div><b>11</b>内容板块</div>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <svg viewBox="0 0 300 260" role="img">
+              <defs>
+                <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f3d79e" stop-opacity=".95"/>
+                  <stop offset="1" stop-color="#e8a33d" stop-opacity=".35"/>
+                </linearGradient>
+              </defs>
+              <rect x="24" y="18" width="252" height="168" rx="12" fill="#0b2030" stroke="#2c5a6b" stroke-width="2"/>
+              <rect x="40" y="34" width="220" height="118" rx="6" fill="#123646"/>
+              <g opacity=".9">
+                <rect x="54" y="48" width="58" height="42" rx="4" fill="#1d6b6b"/>
+                <rect x="122" y="48" width="58" height="42" rx="4" fill="#2c5a6b"/>
+                <rect x="190" y="48" width="54" height="42" rx="4" fill="#1d6b6b"/>
+                <rect x="54" y="98" width="58" height="42" rx="4" fill="#2c5a6b"/>
+                <rect x="122" y="98" width="58" height="42" rx="4" fill="#1d6b6b"/>
+                <rect x="190" y="98" width="54" height="42" rx="4" fill="#2c5a6b"/>
+              </g>
+              <circle cx="150" cy="119" r="30" fill="none" stroke="url(#hg1)" stroke-width="4"/>
+              <path d="M150 96l6 13 14 2-10 10 3 14-13-7-13 7 3-14-10-10 14-2z" fill="#f3d79e" opacity=".9"/>
+              <rect x="60" y="200" width="180" height="12" rx="6" fill="#1d6b6b"/>
+              <rect x="60" y="220" width="120" height="12" rx="6" fill="#2c5a6b"/>
+              <circle cx="262" cy="226" r="16" fill="#e8a33d"/>
+              <path d="M255 226l5 5 9-10" stroke="#0f2b3d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- 01 概览 -->
+      <section class="section" id="overview">
+        <div class="sec-head">
+          <h2>鉴黄审核工具涵盖哪些方向</h2>
+          <span class="more">工具概览</span>
+        </div>
+        <div class="overview-panel">
+          <p>鉴黄师类内容审核工具面向平台内容安全岗位，常见能力集中在图像识别、视频抽帧检测、文本与弹幕过滤、人工复核队列、违规样本库和审核留痕六个方向。图像识别侧重静态图片的裸露度与敏感部位判定；视频抽帧检测按关键帧间隔采样，适合直播回放与短视频批量过审；人工复核队列负责把机器置信度处于临界区间的样本推给审核员，减少误杀；违规样本库用于沉淀典型命中案例，供新审核员比对学习；留痕模块则记录每一次处置动作，方便后续申诉与合规审计。</p>
+          <p>不同团队的选型差异主要来自业务体量。中小型社区更关注单机版审核端与批量导入能力，重点是把每日几千张图片快速分级；大型平台通常需要分布式部署版本，配合接口调用与自有中台对接。鉴黄师官方下载页面整理的各版本说明，正是围绕这些差异展开：哪个版本支持离线运行、哪个版本提供规则自定义、哪个版本带完整的复核工作台，都会在版本卡片中列出。</p>
+          <div class="overview-facts">
+            <div class="ov-fact"><b>静态图像识别</b><span>裸露度分级、敏感区域标注</span></div>
+            <div class="ov-fact"><b>视频抽帧审核</b><span>关键帧采样、时间点回跳</span></div>
+            <div class="ov-fact"><b>人工复核队列</b><span>临界样本二次判定</span></div>
+            <div class="ov-fact"><b>违规样本库</b><span>典型命中案例沉淀</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 精选 -->
+      <section class="section" id="picks">
+        <div class="sec-head">
+          <h2>版本与配套工具精选</h2>
+          <span class="more">8 个条目</span>
+        </div>
+        <p class="sec-intro">按运行平台与使用场景列出可下载的版本条目，含版本号、功能侧重与适配团队规模。</p>
+
+        <div class="search-box">
+          <input type="search" id="pickSearch" placeholder="搜索版本名、平台或功能，如「离线」「视频抽帧」" aria-label="搜索版本条目">
+          <button class="btn btn-ghost" type="button" id="pickReset">重置</button>
+        </div>
+        <p class="no-result" id="pickNoResult">没有匹配的版本条目，换个关键词试试，例如「单机」「接口」。</p>
+
+        <div class="card-grid" id="pickGrid">
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-v421/400/300" width="400" height="300" loading="lazy" alt="鉴黄师 4.2.1 审核端主界面"></div>
+            <div class="cbody">
+              <h3>鉴黄师 4.2.1 审核端</h3>
+              <div class="tags"><span class="type-tag">桌面端</span><span>图像识别</span><span>复核队列</span></div>
+              <p class="desc">当前主推版本，内置图像分级与人工复核工作台，支持批量导入本地图片文件夹并导出处置结果。</p>
+              <div class="meta"><span>更新 2026-11-06</span><span class="hot">热度 9.6</span></div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-lite32/400/300" width="400" height="300" loading="lazy" alt="鉴黄师 Lite 3.2 轻量版界面"></div>
+            <div class="cbody">
+              <h3>鉴黄师 Lite 3.2 轻量版</h3>
+              <div class="tags"><span class="type-tag">轻量版</span><span>离线运行</span><span>低配置</span></div>
+              <p class="desc">占用内存低，可在 8GB 内存机器上离线运行，适合个人审核员或小团队做初步筛查。</p>
+              <div class="meta"><span>更新 2026-10-28</span><span class="hot">热度 8.9</span></div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-video18/400/300" width="400" height="300" loading="lazy" alt="视频抽帧审核模块工作画面"></div>
+            <div class="cbody">
+              <h3>视频抽帧审核模块 1.8</h3>
+              <div class="tags"><span class="type-tag">视频审核</span><span>关键帧采样</span><span>时间点回跳</span></div>
+              <p class="desc">按秒级间隔抽取关键帧，命中后可直接回跳到对应时间点，适合短视频与直播回放批量过审。</p>
+              <div class="meta"><span>更新 2026-11-03</span><span class="hot">热度 9.1</span></div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-rule27/400/300" width="400" height="300" loading="lazy" alt="审核规则编辑器配置面板"></div>
+            <div class="cbody">
+              <h3>审核规则编辑器 2.7</h3>
+              <div class="tags"><span class="type-tag">规则配置</span><span>自定义阈值</span><span>分级策略</span></div>
+              <p class="desc">以可视化条件组合定义裸露度阈值与命中动作，支持按业务线保存多套规则方案并互相切换。</p>
+              <div class="meta"><span>更新 2026-10-31</span><span class="hot">热度 8.4</span></div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-api15/400/300" width="400" height="300" loading="lazy" alt="平台接口对接文档示意"></div>
+            <div class="cbody">
+              <h3>平台接口对接包 1.5</h3>
+              <div class="tags"><span class="type-tag">接口版</span><span>分布式部署</span><span>自有中台</span></div>
+              <p class="desc">提供 HTTP 与消息队列两种接入方式，供已有审核中台的平台把识别能力嵌入自有流程。</p>
+              <div class="meta"><span>更新 2026-10-25</span><span class="hot">热度 8.2</span></div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-sample09/400/300" width="400" height="300" loading="lazy" alt="违规样本库比对界面"></div>
+            <div class="cbody">
+              <h3>违规样本库 0.9</h3>
+              <div class="tags"><span class="type-tag">样本学习</span><span>案例比对</span><span>新人培训</span></div>
+              <p class="desc">收录典型命中与误判案例，附判定理由标注，供新审核员按类别逐条比对学习。</p>
+              <div class="meta"><span>更新 2026-11-01</span><span class="hot">热度 8.7</span></div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-audit21/400/300" width="400" height="300" loading="lazy" alt="审核留痕与导出报表界面"></div>
+            <div class="cbody">
+              <h3>审核留痕与报表 2.1</h3>
+              <div class="tags"><span class="type-tag">合规留痕</span><span>处置记录</span><span>申诉溯源</span></div>
+              <p class="desc">记录每次处置动作的操作者、时间与依据，支持按时间段导出报表，便于申诉与合规检查。</p>
+              <div class="meta"><span>更新 2026-10-29</span><span class="hot">热度 8.0</span></div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <div class="thumb"><img src="https://picsum.photos/seed/jianhuang-mobile12/400/300" width="400" height="300" loading="lazy" alt="移动端复核助手界面"></div>
+            <div class="cbody">
+              <h3>移动端复核助手 1.2</h3>
+              <div class="tags"><span class="type-tag">移动端</span><span>推送复核</span><span>快速处置</span></div>
+              <p class="desc">把临界样本推送到手机端，审核员在通勤或值班间隙完成二次判定，处置结果同步回主队列。</p>
+              <div class="meta"><span>更新 2026-10-22</span><span class="hot">热度 7.8</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 03 更新动态 -->
+      <section class="section" id="updates">
+        <div class="sec-head">
+          <h2>版本更新与规则调整动态</h2>
+          <span class="more">10 条</span>
+        </div>
+        <ul class="news-list">
+          <li><time>2026-11-08</time><div><b>鉴黄师 4.2.1 审核端发布</b><p>新增批量导入队列断点续传，人工复核工作台支持快捷键标记。</p></div></li>
+          <li><time>2026-11-07</time><div><b>视频抽帧审核模块 1.8 调整采样策略</b><p>默认采样间隔由 3 秒改为 2 秒，长视频命中回跳更精确。</p></div></li>
+          <li><time>2026-11-05</time><div><b>违规样本库新增「泳装场景误判」分类</b><p>补充 43 条边界案例，标注误判原因与推荐处置动作。</p></div></li>
+          <li><time>2026-11-04</time><div><b>审核规则编辑器上线阈值分组</b><p>同一业务线可按图片、视频、直播拆分三套裸露度阈值。</p></div></li>
+          <li><time>2026-11-02</time><div><b>平台接口对接包 1.5 支持消息队列重试</b><p>识别失败时按指数退避重试，避免高峰时段请求堆积。</p></div></li>
+          <li><time>2026-10-31</time><div><b>审核留痕与报表 2.1 增加申诉溯源视图</b><p>可按单条处置记录反查原始素材与判定依据。</p></div></li>
+          <li><time>2026-10-29</time><div><b>鉴黄师 Lite 3.2 修复大批量导入卡顿</b><p>一次性导入 5000 张以上图片时队列推进更稳定。</p></div></li>
+          <li><time>2026-10-27</time><div><b>移动端复核助手 1.2 内测开放</b><p>首批开放 200 个内测名额，支持安卓与 iOS 双端推送。</p></div></li>
+          <li><time>2026-10-24</time><div><b>桌面端新增「疑似未成年人」优先队列</b><p>涉及未成年人的样本默认提升复核优先级。</p></div></li>
+          <li><time>2026-10-21</time><div><b>违规样本库累计收录突破 1.2 万条</b><p>按场景、误判类型与处置动作三维度建立索引。</p></div></li>
+        </ul>
+      </section>
+
+      <!-- 04 分类入口 -->
+      <section class="section" id="cats">
+        <div class="sec-head">
+          <h2>按功能方向找版本</h2>
+          <span class="more">8 个分类</span>
+        </div>
+        <p class="sec-intro">分类对应实际使用场景，点击进入对应条目区查看版本说明。</p>
+        <div class="cat-grid">
+          <a class="cat-tile" href="#picks"><b>图像识别</b><span>静态图片裸露度分级</span></a>
+          <a class="cat-tile" href="#picks"><b>视频抽帧</b><span>关键帧采样与回跳</span></a>
+          <a class="cat-tile" href="#picks"><b>人工复核</b><span>临界样本二次判定</span></a>
+          <a class="cat-tile" href="#picks"><b>规则配置</b><span>阈值与命中动作组合</span></a>
+          <a class="cat-tile" href="#picks"><b>接口对接</b><span>嵌入自有审核中台</span></a>
+          <a class="cat-tile" href="#picks"><b>样本学习</b><span>典型命中与误判案例</span></a>
+          <a class="cat-tile" href="#picks"><b>合规留痕</b><span>处置记录与申诉溯源</span></a>
+          <a class="cat-tile" href="#picks"><b>移动端复核</b><span>推送处置与结果同步</span></a>
+        </div>
+      </section>
+
+      <!-- 05 深度解析 -->
+      <section class="section" id="deep">
+        <div class="deep">
+          <h2>审核工具选型与判定标准解析</h2>
+          <p class="lead">围绕识别准确率、复核成本、部署方式与合规要求四个维度，说明鉴黄类工具在实际选型中的差异。</p>
+
+          <h3>静态图像识别与视频抽帧的区别</h3>
+          <p>静态图像识别处理的是单张图片，判定对象明确，通常输出裸露度分值、敏感区域坐标和推荐处置动作三部分结果。它的优势是速度快、结果可解释，适合头像、帖子配图、商品图这类单图场景。视频抽帧则是先按固定间隔采样关键帧，再把每帧送入识别流程，最后把命中帧的时间点与原始视频对齐。两者的核心差异在于：图片识别关心「这一张是什么」，视频抽帧关心「这一段里哪几秒有问题」。</p>
+          <p>实际使用中，视频抽帧的采样间隔直接决定漏检率与计算成本。间隔越短，越不容易漏掉闪切画面，但同样一条十分钟视频要处理的帧数会成倍增加。多数团队会在直播回放场景用 1 至 2 秒间隔，在长视频点播场景放宽到 3 至 5 秒，并对命中片段做二次人工确认。</p>
+
+          <h3>裸露度阈值不是越低越好</h3>
+          <p>阈值设定是审核工具里最容易被误解的部分。把阈值调得很低，确实能减少漏放，但会带来大量误杀：泳装、健身、母婴、医学示意图都可能被推进人工队列，审核员的时间被边界样本占满。合理的做法是按业务线分开设阈值，再用样本库里的边界案例反复校准。</p>
+          <ul>
+            <li><b>社区头像与个人资料：</b>阈值偏严，宁可多复核，因为展示位置显眼、影响面大。</li>
+            <li><b>商品图与服饰类目：</b>阈值适当放宽，配合类目白名单，减少泳装与内衣误判。</li>
+            <li><b>直播与短视频：</b>阈值分时段设置，夜间流量高峰期可临时收紧并增加复核人手。</li>
+            <li><b>医学与教育内容：</b>单独建白名单通道，由专人审核而不是走通用队列。</li>
+          </ul>
+
+          <h3>人工复核队列的组织方式</h3>
+          <p>机器判定的置信度通常落在三个区间：高置信命中、高置信放行、临界待定。人工复核队列只应承接临界区间，否则审核员会疲于处理已经没有争议的样本。队列内部还需要再分层，比如把涉及未成年人的样本、被多次举报的样本、来自高曝光位置的样本排到前面。</p>
+          <p>复核工作台的效率取决于几个细节：能不能用快捷键完成「命中、放行、转人工复审」三个动作；命中后能否一键查看同一作者的关联素材；处置结果是否自动回写样本库。这些细节比识别模型本身的参数更影响日常产出。</p>
+
+          <h3>部署方式与团队规模的匹配</h3>
+          <table class="compare-table">
+            <thead>
+              <tr><th>部署方式</th><th>适合团队</th><th>主要取舍</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>单机桌面端</td><td>个人审核员、5 人以下小组</td><td>上手快、无需运维，但并发能力有限</td></tr>
+              <tr><td>局域网多机部署</td><td>10 至 50 人审核团队</td><td>可共享样本库与规则，需要内网维护</td></tr>
+              <tr><td>接口对接自有中台</td><td>已有审核系统的中大型平台</td><td>灵活度高，需投入开发联调成本</td></tr>
+              <tr><td>分布式集群</td><td>日处理百万级以上的平台</td><td>吞吐强，运维与成本要求高</td></tr>
+            </tbody>
+          </table>
+
+          <h3>合规留痕为什么不能省</h3>
+          <p>内容处置一旦涉及作者申诉，平台需要说明「在什么时间、由谁、依据哪条规则、对哪份素材做了什么处置」。留痕模块把这些信息结构化保存，既方便内部复盘，也便于应对监管检查。选择工具时，应确认处置记录是否包含操作者标识、规则版本号、素材指纹与处置时间四项要素，以及能否按时间段导出。</p>
+          <p>另外要注意素材本身的保存策略。部分团队为了节省存储只保留处置结论，等到申诉时已无法回溯原始素材，导致复核缺乏依据。较稳妥的做法是对命中样本保留缩略图与指纹，对争议样本保留完整素材并设置到期清理。</p>
+        </div>
+      </section>
+
+      <!-- 06 体验指南 -->
+      <section class="section" id="guide">
+        <div class="sec-head">
+          <h2>从下载到跑通第一批审核的路径</h2>
+          <span class="more">5 步</span>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>先确认业务场景再选版本</h3>
+            <p>只处理帖子配图的团队选桌面审核端即可；有短视频业务的，需要带视频抽帧模块的版本；已有审核中台的平台优先看接口对接包，避免重复建设。</p>
+          </li>
+          <li>
+            <h3>核对运行环境与授权方式</h3>
+            <p>查看版本说明里的系统要求、内存占用与是否需要联网激活。离线版本适合内网环境，但样本库更新需要手动导入。</p>
+          </li>
+          <li>
+            <h3>用样本库做一轮阈值校准</h3>
+            <p>拿 200 至 500 条历史素材跑一遍，分别统计漏放与误杀比例，再决定阈值往严还是往宽调。这一步比直接上线更能减少后续返工。</p>
+          </li>
+          <li>
+            <h3>配置复核队列与人员分工</h3>
+            <p>按业务线拆分队列，指定每条队列的负责人；把高优先级样本类型（涉未成年人、多次举报、高曝光位）排到队首。</p>
+          </li>
+          <li>
+            <h3>建立每周复盘与规则迭代</h3>
+            <p>固定每周统计误判类型分布，把新出现的边界案例补进样本库，同步更新规则版本号，保证留痕记录能对应到具体规则。</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 07 FAQ -->
+      <section class="section" id="faq">
+        <div class="sec-head">
+          <h2>关于鉴黄师工具的常见问题</h2>
+          <span class="more">6 问</span>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>鉴黄师类工具一般多久更新一次版本？</summary>
+            <div class="ans">功能版本通常按月迭代，识别模型与样本库更新更频繁，多为每周一次。涉及规则阈值调整的更新会附带变更说明，建议升级前先在测试队列跑一轮样本，确认误判率没有明显上升再全量切换。</div>
+          </details>
+          <details>
+            <summary>静态图像识别和视频抽帧审核有什么本质区别？</summary>
+            <div class="ans">图像识别对单张图输出分值与区域，结果边界清晰；视频抽帧先采样再逐帧判定，需要额外处理时间点对齐与片段合并。视频场景的漏检风险主要来自采样间隔，图像场景的误判风险主要来自阈值设定。</div>
+          </details>
+          <details>
+            <summary>第一次接触这类工具，从哪个版本开始用比较好？</summary>
+            <div class="ans">建议从轻量版或桌面审核端入手，先用几百条历史素材熟悉判定流程与复核队列的操作逻辑，再根据业务量决定是否升级到多机部署或接口对接版本。直接上分布式版本容易在配置阶段卡住。</div>
+          </details>
+          <details>
+            <summary>裸露度阈值通常怎么定才合理？</summary>
+            <div class="ans">没有统一数值。常见做法是按业务线分别设定：头像与个人资料偏严，商品图与服饰类目适当放宽并配合白名单，直播按时段动态调整。定完阈值后要用样本库回归验证，统计漏放与误杀比例再微调。</div>
+          </details>
+          <details>
+            <summary>误杀率太高时应该先调阈值还是先补样本？</summary>
+            <div class="ans">先看误杀集中在哪些类型。如果是泳装、健身、母婴这类固定场景，优先补白名单与样本；如果是普遍性偏高，再考虑放宽阈值。只调阈值不补样本，同类误判会反复出现。</div>
+          </details>
+          <details>
+            <summary>审核留痕需要保留哪些信息才算完整？</summary>
+            <div class="ans">至少包含操作者标识、处置时间、依据的规则版本号与素材指纹四项。若涉及申诉，还需要能回溯到原始素材或缩略图。只保留「已处置」结论而不记录依据，后续复核会很被动。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 08 用户评论 -->
+      <section class="section" id="comments">
+        <div class="sec-head">
+          <h2>审核员与运营人员的使用反馈</h2>
+          <span class="more">14 条</span>
+        </div>
+        <div class="comments">
+          <div class="cmt"><div class="who"><span class="avatar">陈</span><b>陈默审核组</b><time>11-08</time></div>4.2.1 的断点续传挺实用，导入五千张图中间断了不用重来。复核工作台的快捷键要是能自定义就更好了。</div>
+          <div class="cmt"><div class="who"><span class="avatar">林</span><b>林间小站</b><time>11-07</time></div>视频抽帧间隔改成 2 秒后，回放里闪切的画面基本能抓到，之前 3 秒的时候漏过两次。</div>
+          <div class="cmt"><div class="who"><span class="avatar">赵</span><b>赵工运维</b><time>11-06</time></div>接口对接包的文档写得比较清楚，消息队列重试那块省了我们不少联调时间。</div>
+          <div class="cmt"><div class="who"><span class="avatar">吴</span><b>吴桐</b><time>11-05</time></div>样本库的泳装误判分类很有用，新人培训直接照着看，比口头讲快得多。</div>
+          <div class="cmt"><div class="who"><span class="avatar">周</span><b>周舟内容安全</b><time>11-04</time></div>阈值分组上线后，图片和直播终于能分开设了。之前一套阈值两边都不太合适。</div>
+          <div class="cmt"><div class="who"><span class="avatar">郑</span><b>郑小满</b><time>11-03</time></div>Lite 版在旧笔记本上跑得动，适合我们这种小团队先做初筛，就是批量导出格式少了点。</div>
+          <div class="cmt"><div class="who"><span class="avatar">孙</span><b>孙编辑</b><time>11-02</time></div>留痕报表按时间段导出很方便，申诉的时候直接拉记录，不用再翻聊天记录找处置人。</div>
+          <div class="cmt"><div class="who"><span class="avatar">马</span><b>马骁</b><time>11-01</time></div>移动端复核还在内测，推送延迟偶尔有几秒，通勤路上处理临界样本够用了。</div>
+          <div class="cmt"><div class="who"><span class="avatar">何</span><b>何叶</b><time>10-31</time></div>规则编辑器可视化之后，运营同事也能自己调条件，不用每次都找技术改配置。</div>
+          <div class="cmt"><div class="who"><span class="avatar">郭</span><b>郭明</b><time>10-30</time></div>整体识别准确率不错，但母婴类图片还是偶尔误杀，后来加了白名单才稳定下来。</div>
+          <div class="cmt"><div class="who"><span class="avatar">罗</span><b>罗一鸣</b><time>10-29</time></div>桌面端内存占用比预期高，16G 机器同时开复核队列和浏览器会有点卡，建议错峰跑批。</div>
+          <div class="cmt"><div class="who"><span class="avatar">唐</span><b>唐果</b><time>10-27</time></div>样本库按场景、误判类型、处置动作建索引，找同类案例确实快，希望继续加医学示意图分类。</div>
+          <div class="cmt"><div class="who"><span class="avatar">冯</span><b>冯远</b><time>10-25</time></div>分布式部署版本吞吐没问题，就是运维文档偏薄，集群扩缩容部分希望能补详细点。</div>
+          <div class="cmt"><div class="who"><span class="avatar">许</span><b>许清</b><time>10-23</time></div>用了一个月，复核队列分层之后审核员压力小了很多，涉未成年人的样本再也不会压在队尾。</div>
+        </div>
+      </section>
+
+      <!-- 09 相关资讯 -->
+      <section class="section" id="news">
+        <div class="sec-head">
+          <h2>内容审核领域近期资讯</h2>
+          <span class="more">6 条</span>
+        </div>
+        <div class="info-list">
+          <article class="info-item">
+            <div class="pic"><img src="https://picsum.photos/seed/review-news-01/600/400" width="600" height="400" loading="lazy" alt="直播回放审核流程调整示意"></div>
+            <div class="ibody">
+              <h3><a href="#news">直播回放审核新增 2 秒抽帧要求</a></h3>
+              <div class="idate">2026-11-07</div>
+              <p>多家平台更新回放审核规范，要求关键帧采样间隔不超过 2 秒，并对命中片段保留完整时间戳。</p>
+            </div>
+          </article>
+          <article class="info-item">
+            <div class="pic"><img src="https://picsum.photos/seed/review-news-02/600/400" width="600" height="400" loading="lazy" alt="违规样本库分类界面"></div>
+            <div class="ibody">
+              <h3><a href="#news">违规样本库新增边界场景分类</a></h3>
+              <div class="idate">2026-11-05</div>
+              <p>泳装、健身、母婴、医学示意图四类边界场景单独建类，附误判原因标注与推荐处置动作。</p>
+            </div>
+          </article>
+          <article class="info-item">
+            <div class="pic"><img src="https://picsum.photos/seed/review-news-03/600/400" width="600" height="400" loading="lazy" alt="审核员排班与队列监控面板"></div>
+            <div class="ibody">
+              <h3><a href="#news">审核队列分层实践在中小平台推广</a></h3>
+              <div class="idate">2026-11-03</div>
+              <p>按曝光位置与举报次数给样本排优先级，成为中小平台缓解复核积压的常见做法。</p>
+            </div>
+          </article>
+          <article class="info-item">
+            <div class="pic"><img src="https://picsum.photos/seed/review-news-04/600/400" width="600" height="400" loading="lazy" alt="处置留痕与申诉溯源界面"></div>
+            <div class="ibody">
+              <h3><a href="#news">处置留痕需含规则版本号成为共识</a></h3>
+              <div class="idate">2026-10-31</div>
+              <p>申诉复核实践中，缺少规则版本号的处置记录难以自证依据，多个团队开始补录版本信息。</p>
+            </div>
+          </article>
+          <article class="info-item">
+            <div class="pic"><img src="https://picsum.photos/seed/review-news-05/600/400" width="600" height="400" loading="lazy" alt="接口对接与消息队列示意图"></div>
+            <div class="ibody">
+              <h3><a href="#news">审核能力接口化接入需求上升</a></h3>
+              <div class="idate">2026-10-28</div>
+              <p>已有审核中台的平台更倾向以接口方式接入识别能力，减少重复建设与数据迁移成本。</p>
+            </div>
+          </article>
+          <article class="info-item">
+            <div class="pic"><img src="https://picsum.photos/seed/review-news-06/600/400" width="600" height="400" loading="lazy" alt="审核员培训现场讨论"></div>
+            <div class="ibody">
+              <h3><a href="#news">审核员培训转向案例比对模式</a></h3>
+              <div class="idate">2026-10-24</div>
+              <p>以典型命中与误判案例为教材的培训方式，比单纯讲规则条文更容易统一判定尺度。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="section" id="related">
+        <div class="sec-head">
+          <h2>延伸方向与细分条目</h2>
+          <span class="more">8 个标签</span>
+        </div>
+        <p class="sec-intro">从版本下载延伸到具体能力与配套方向，适合继续深入查找。</p>
+        <div class="tag-index">
+          <a href="#deep">裸露度阈值校准 <span class="c">方法</span></a>
+          <a href="#deep">视频抽帧采样间隔 <span class="c">参数</span></a>
+          <a href="#guide">复核队列分层 <span class="c">实践</span></a>
+          <a href="#picks">离线审核端部署 <span class="c">版本</span></a>
+          <a href="#picks">接口对接与消息队列 <span class="c">接入</span></a>
+          <a href="#deep">合规留痕四要素 <span class="c">规范</span></a>
+          <a href="#faq">误杀与漏放平衡 <span class="c">问答</span></a>
+          <a href="#picks">移动端推送复核 <span class="c">工具</span></a>
+        </div>
+      </section>
+
+      <!-- 11 版本榜 -->
+      <section class="section" id="rank">
+        <div class="sec-head">
+          <h2>版本关注度榜（2026 年 11 月）</h2>
+          <span class="more">按近 30 天检索热度</span>
+        </div>
+        <div class="rank-panel">
+          <div class="rank-row"><span class="rank-no">1</span><div><div class="rtitle">鉴黄师 4.2.1 审核端</div><div class="rsub">桌面端 · 复核工作台</div></div><span class="rscore">9.6</span><div class="rank-bar"><i style="width:96%"></i></div></div>
+          <div class="rank-row"><span class="rank-no">2</span><div><div class="rtitle">视频抽帧审核模块 1.8</div><div class="rsub">视频审核 · 关键帧采样</div></div><span class="rscore">9.1</span><div class="rank-bar"><i style="width:91%"></i></div></div>
+          <div class="rank-row"><span class="rank-no">3</span><div><div class="rtitle">鉴黄师 Lite 3.2 轻量版</div><div class="rsub">轻量版 · 离线运行</div></div><span class="rscore">8.9</span><div class="rank-bar"><i style="width:89%"></i></div></div>
+          <div class="rank-row"><span class="rank-no">4</span><div><div class="rtitle">违规样本库 0.9</div><div class="rsub">样本学习 · 案例比对</div></div><span class="rscore">8.7</span><div class="rank-bar"><i style="width:87%"></i></div></div>
+          <div class="rank-row"><span class="rank-no">5</span><div><div class="rtitle">审核规则编辑器 2.7</div><div class="rsub">规则配置 · 阈值分组</div></div><span class="rscore">8.4</span><div class="rank-bar"><i style="width:84%"></i></div></div>
+          <div class="rank-row"><span class="rank-no">6</span><div><div class="rtitle">平台接口对接包 1.5</div><div class="rsub">接口版 · 消息队列</div></div><span class="rscore">8.2</span><div class="rank-bar"><i style="width:82%"></i></div></div>
+          <div class="rank-row"><span class="rank-no">7</span><div><div class="rtitle">审核留痕与报表 2.1</div><div class="rsub">合规留痕 · 申诉溯源</div></div><span class="rscore">8.0</span><div class="rank-bar"><i style="width:80%"></i></div></div>
+          <div class="rank-row"><span class="rank-no">8</span><div><div class="rtitle">移动端复核助手 1.2</div><div class="rsub">移动端 · 推送复核</div></div><span class="rscore">7.8</span><div class="rank-bar"><i style="width:78%"></i></div></div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右：辅助栏 -->
+    <aside class="side" aria-label="辅助信息">
+      <div class="side-card">
+        <h2>版本热度速览 <span>11-08</span></h2>
+        <div class="body">
+          <ol class="hot-list">
+            <li><div><a href="#picks">鉴黄师 4.2.1 审核端</a><span class="hinfo">断点续传 · 快捷复核</span></div></li>
+            <li><div><a href="#picks">视频抽帧审核模块 1.8</a><span class="hinfo">采样间隔 2 秒</span></div></li>
+            <li><div><a href="#picks">鉴黄师 Lite 3.2 轻量版</a><span class="hinfo">8GB 内存可离线跑</span></div></li>
+            <li><div><a href="#picks">违规样本库 0.9</a><span class="hinfo">边界案例 1.2 万条</span></div></li>
+            <li><div><a href="#picks">审核规则编辑器 2.7</a><span class="hinfo">按业务线分组阈值</span></div></li>
+            <li><div><a href="#picks">平台接口对接包 1.5</a><span class="hinfo">HTTP 与消息队列双接入</span></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h2>最近更新流</h2>
+        <div class="body">
+          <ul class="update-flow">
+            <li>4.2.1 审核端发布<time>今天 09:30</time></li>
+            <li>视频抽帧模块调采样间隔<time>昨天 21:10</time></li>
+            <li>样本库补泳装误判分类<time>11 月 5 日</time></li>
+            <li>规则编辑器上线阈值分组<time>11 月 4 日</time></li>
+            <li>接口包支持失败重试<time>11 月 2 日</time></li>
+            <li>留痕报表增加溯源视图<time>10 月 31 日</time></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h2>下载前核对清单</h2>
+        <div class="body">
+          <ul style="list-style:none;margin:0;padding:0;font-size:13px;color:var(--ink-soft);">
+            <li style="padding:6px 0;border-bottom:1px dashed var(--line-soft);">□ 版本号与更新日期是否对应</li>
+            <li style="padding:6px 0;border-bottom:1px dashed var(--line-soft);">□ 运行平台与内存要求是否满足</li>
+            <li style="padding:6px 0;border-bottom:1px dashed var(--line-soft);">□ 是否需要联网激活或内网授权</li>
+            <li style="padding:6px 0;border-bottom:1px dashed var(--line-soft);">□ 是否包含视频抽帧模块</li>
+            <li style="padding:6px 0;">□ 处置记录能否导出</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <div class="fbrand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#164a5c"/>
+          <circle cx="32" cy="30" r="13" fill="none" stroke="#e8a33d" stroke-width="4"/>
+          <circle cx="32" cy="30" r="4" fill="#e8a33d"/>
+          <path d="M32 43v11M22 54h20" stroke="#e8a33d" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <b>鉴黄师官方下载</b>
+      </div>
+      <p>聚合鉴黄内容审核工具的版本下载说明、功能模块对比与审核规则解析，面向内容安全岗位与平台运营人员。</p>
+    </div>
+    <div>
+      <h4>版本与功能</h4>
+      <ul>
+        <li><a href="#picks">版本精选</a></li>
+        <li><a href="#updates">更新动态</a></li>
+        <li><a href="#cats">功能分类</a></li>
+        <li><a href="#rank">版本关注度榜</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>规则与上手</h4>
+      <ul>
+        <li><a href="#deep">审核规则解析</a></li>
+        <li><a href="#guide">安装与配置路径</a></li>
+        <li><a href="#faq">常见问题</a></li>
+        <li><a href="#related">延伸方向</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>社区与资讯</h4>
+      <ul>
+        <li><a href="#comments">用户反馈</a></li>
+        <li><a href="#news">领域资讯</a></li>
+        <li><a href="#overview">工具概览</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 鉴黄师官方下载 · 内容聚合示例页</span>
+    <span>部分内容为示例数据，仅用于展示页面结构</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input=document.getElementById('pickSearch');
+  var grid=document.getElementById('pickGrid');
+  var noRes=document.getElementById('pickNoResult');
+  var reset=document.getElementById('pickReset');
+  if(!input||!grid)return;
+  var cards=Array.prototype.slice.call(grid.querySelectorAll('.item-card'));
+  function run(){
+    var q=(input.value||'').trim().toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var txt=c.textContent.toLowerCase();
+      var ok=!q||txt.indexOf(q)>-1;
+      c.style.display=ok?'':'none';
+      if(ok)shown++;
+    });
+    noRes.classList.toggle('show',shown===0);
+  }
+  input.addEventListener('input',run);
+  reset.addEventListener('click',function(){input.value='';run();input.focus();});
+})();
+</script>
+</body>
+                                                                    </html>
